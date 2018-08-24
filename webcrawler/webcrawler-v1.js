@@ -2,13 +2,7 @@ const request = require('request');
 
 var page = 'https://www.google.com.ar';
 
-request(page , (err, response, body) => {
-	        if (err) { return console.log(err); }
-	        // console.log(body);
-	        console.log("Pagina: " + page);
-	        console.log("Resultado: " + response.statusCode);
-	        console.log("Data: " + getReleatedURLsList(body));
-});
+visitPage(page);
 
 function getReleatedURLsList(body){
 	var hrefPattern = /href="(.*?)"/g;
@@ -25,4 +19,13 @@ function getReleatedURLsList(body){
 	return hrefs;
 }
 
-// function 
+function visitPage(page){
+	request(page , (err, response, body) => {
+	        if (err) { 
+	        	return console.log(err);
+	        }
+	        console.log("Pagina: " + page);
+	        console.log("Resultado: " + response.statusCode);
+	        console.log("Data: " + getReleatedURLsList(body));
+});
+}

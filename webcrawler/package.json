@@ -1,0 +1,14 @@
+{
+  "name": "webcrawler",
+  "version": "1.0.0",
+  "description": "En este ejercicio realizarán un sencillo web crawler en Node.js, que dada una dirección web, visitará todos los enlaces relativos que contenga dicha página. No se deberán visitar los enlaces externos o absolutos que contenga la página.",
+  "main": "webcrawler-v1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Abella",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
